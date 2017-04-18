@@ -3,11 +3,13 @@
 
 # Question 1 (Naked Twins)
 Q: How do we use constraint propagation to solve the naked twins problem?  
-A: *Student should provide answer here*
+A: In this case the constraint propagation involves finding possible naked twins indexes using the criteria of content length for the box of value 2. Out of the possible indexes those which are
+peers with one another and share the same value are identified. Peers common to each pair of indexes are identified using an intersection between peer sets. For those shared indexes the length of the value for each box is checked to be larger than or equal to 2. For the remaining boxes the value contained by the naked twin box is removed if it is contained on the original value. 
 
 # Question 2 (Diagonal Sudoku)
 Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
-A: *Student should provide answer here*
+A: In this case the possible units from which the peers dictionary is obtained are extended by including a diagonal unit. This unit consists of the left diagonal (i.e. A1…I9) and the right
+diagonal (I1…A9). The actual eliminate and only choice constraints are not affected in their functionality as the changes on the unitList and peers are propagated.
 
 ### Install
 
